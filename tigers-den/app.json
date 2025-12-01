@@ -1,0 +1,54 @@
+{
+    "expo": {
+        "name": "tigers-den",
+        "slug": "tigers-den",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "userInterfaceStyle": "light",
+        "splash": {
+            "image": "./assets/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+        },
+        "assetBundlePatterns": [
+            "**/*"
+        ],
+        "ios": {
+            "supportsTablet": true,
+            "bundleIdentifier": "com.tigersden.app",
+            "infoPlist": {
+                "NSFaceIDUsageDescription": "Allow Tigers Den to use Face ID for quick login.",
+                "NSCameraUsageDescription": "Allow Tigers Den to scan QR codes for order verification."
+            }
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/adaptive-icon.png",
+                "backgroundColor": "#ffffff"
+            },
+            "permissions": [
+                "USE_BIOMETRIC",
+                "USE_FINGERPRINT",
+                "CAMERA"
+            ]
+        },
+        "web": {
+            "favicon": "./assets/favicon.png"
+        },
+        "plugins": [
+            [
+                "expo-local-authentication",
+                {
+                    "faceIDPermission": "Allow Tigers Den to use Face ID for quick login."
+                }
+            ],
+            [
+                "expo-camera",
+                {
+                    "cameraPermission": "Allow Tigers Den to scan QR codes for order verification."
+                }
+            ]
+        ]
+    }
+}
